@@ -14,10 +14,10 @@ import com.devsuperior.bds02.services.EventService;
 @RestController
 @RequestMapping(value = "/events")
 public class EventController {
-	
+
 	@Autowired
 	private EventService service;
-	
+
 	@PutMapping(value = "/{id}")
 	public ResponseEntity<EventDTO> update(@PathVariable Long id, @RequestBody EventDTO dto) {
 		EventDTO eventDTO = service.update(id, dto);
